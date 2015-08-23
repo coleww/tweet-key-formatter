@@ -1,0 +1,21 @@
+{
+  "name": "tweet-key-formatter",
+  "version": "1.0.0",
+  "description": "instantly get twit-friendly-twitter keys",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -o bundle.js",
+    "watch": "watchify index.js -o bundle.js --debug --verbose",
+    "deploy": ""
+  },
+  "keywords": [
+    "JSON"
+  ],
+  "author": "Cole Willsea <coleww@gmail.com> (http://colewillsea.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "gh-pages-deploy": "^0.3.0",
+    "watchify": "^2.4.0"
+  }
+}
