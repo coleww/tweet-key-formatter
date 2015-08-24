@@ -22,5 +22,5 @@ function findIt (strings, target) {
     return str.match(target)
   })
   match = match || ['']
-  return match[0].replace(target, '')
+  return match[0].replace(target, '').replace(/\s/, '')
 }
