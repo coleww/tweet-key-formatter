@@ -5,7 +5,7 @@
 
 Go to dev.twitter.com and copy the entire API keys page, 
 
-come to [this page](http://coleww.github.io//) and paste it to the page,
+come to [this page](http://coleww.github.io/tweet-key-formatter/) and paste it to the page,
 
 get yr keys formatted just like how [twit](https://github.com/ttezel/twit) expects
 
