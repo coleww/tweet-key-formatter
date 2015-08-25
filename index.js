@@ -13,7 +13,7 @@ document.body.addEventListener('paste', function(e){
     }
     output.innerHTML = JSON.stringify(configs, null, 2);
   } catch (e) {
-    output.innerHTML = 'WOW something broke! ' + e.name + ': ' + e.message
+    output.innerHTML = 'WOW something broke! ' + e.name + ': ' + e.message + ' |||| Are you certain that you clicked the generate access token button and copied the entire page at "https://apps.twitter.com/app/SOME_NUMBER/keys"?'
   }
 });
 
