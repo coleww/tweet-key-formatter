@@ -1,5 +1,6 @@
 
-var output = document.querySelector('.formatted')
+var JSONoutput = document.querySelector('.json')
+var YAMLoutput = document.querySelector('.yaml')
 
 document.body.addEventListener('paste', function(e){
   var data = e.clipboardData.getData('text/plain')
@@ -11,9 +12,13 @@ document.body.addEventListener('paste', function(e){
       access_token: findIt(infos, /Access Token /),
       access_token_secret: findIt(infos, /Access Token Secret /)
     }
-    output.innerHTML = JSON.stringify(configs, null, 2);
+    var stringy = JSON.stringify(configs, null, 2)
+    JSONoutput.innerHTML = stringy
+
+
+    YAMLoutput.innerHTML = stringy.replace(/(\"|\{|\}|  |\,)/g, '')
   } catch (e) {
-    output.innerHTML = 'WOW something broke! ' + e.name + ': ' + e.message + ' |||| Are you certain that you clicked the generate access token button and copied the entire page at "https://apps.twitter.com/app/SOME_NUMBER/keys"?'
+    error.innerHTML = 'WOW something broke! ' + e.name + ': ' + e.message + ' |||| Are you certain that you clicked the generate access token button and copied the entire page at "https://apps.twitter.com/app/SOME_NUMBER/keys"?'
   }
 });
 
